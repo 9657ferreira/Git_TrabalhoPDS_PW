@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Define o tipo de documento como HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Garante que o site seja responsivo e se adapte a diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Login - Inforfast Business Solutions</title>
+    <!-- Link para o arquivo CSS externo que contém os estilos da página de login -->
+    <link rel="stylesheet" href="./css/login/login-styles.css">
+</head>
+<body>
+    <!-- Container principal que agrupa toda a seção de login -->
+    <div class="container">
+        
+        <!-- Seção para a imagem principal do lado esquerdo -->
+        <div class="image-section">
+            <!-- Imagem ilustrativa da aplicação ou da empresa -->
+            <img src="./imagens/principal/imagemprincipal.PNG" alt="Imagem Principal">
+        </div>
+        
+        <!-- Seção do formulário de login -->
+        <div class="form-section">
+            <!-- Logo da empresa para identificação visual -->
+            <a href="admin-dashboard.html">
+                <img src="./imagens/logo/SmallLogo.png" alt="Inforfast Business Solutions" class="logo">
+            </a>
+            
+            <!-- Formulário de autenticação -->
+            <form>
+                <!-- Campo para o utilizador inserir o email -->
+                <input type="email" placeholder="Email" required>
+                
+                <!-- Campo para o utilizador inserir a password -->
+                <input type="password" placeholder="Password" required>
+                
+                <!-- Opções adicionais, como lembrar do utilizador e recuperar a password -->
+                <div class="options">
+                    <label>
+                        <!-- Checkbox para a opção "Lembrar-me" -->
+                        <input type="checkbox"> Lembrar-me
+                    </label>
+                    <!-- Link para a recuperação da password esquecida -->
+                    <a href="#">Esqueceu-se da password?</a>
+                </div>
+                
+                <!-- Botão para submeter o formulário de login -->
+                <button type="submit" class="submit-btn">Entrar</button>
+                
+                <!-- Texto informativo para utilizadores não registados, com link para o registo -->
+                <p>Não estás registado? <a href="registarConta.html">Regista-te agora</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

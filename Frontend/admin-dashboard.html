@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- Define o tipo de documento como HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Garante que a página seja responsiva e se adapte a diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Painel de Administrador - Inforfast</title>
+    <!-- Liga o documento ao arquivo de estilos CSS específico para o painel de administrador -->
+    <link rel="stylesheet" href="./css/admin-dashboard/admin-dashboard.css">
+</head>
+
+<body>
+    <!-- Container principal que envolve toda a estrutura do painel -->
+    <div class="dashboard-container">
+
+        <!-- Barra lateral (Sidebar) -->
+        <aside class="sidebar">
+            <!-- Seção do logotipo -->
+            <div class="logo">
+                <!-- Logo da empresa para identidade visual -->
+                <a href="index.html">
+                    <img src="./imagens/logo/SmallLogo.png" alt="Inforfast Business Solutions" class="logo">
+                </a>
+            </div>
+
+
+            <!-- Navegação do painel de administração -->
+            <nav>
+                <ul>
+                    <!-- Itens do menu lateral com links de navegação -->
+                    <!-- O link 'Dashboard' está marcado como ativo -->
+                    <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="#">Utilizadores</a></li>
+                    <li><a href="#">Relatórios</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão para terminar a sessão -->
+            <div class="logout">
+                <a href="index.html" onclick="logout()">Terminar Sessão </a>
+            </div>
+            <!-- Importar o script de logout -->
+            <script src="./javaScript/scriptTerminarSessao.js" defer></script>
+
+
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+
+            <!-- Cabeçalho do painel -->
+            <header class="header">
+                <!-- Título da página do painel -->
+                <h1>Painel de Administrador</h1>
+
+                <!-- Informações do utilizador (administrador) -->
+                <div class="user-info">
+                    <!-- Mensagem de boas-vindas -->
+                    <span>Bem-vindo, Administrador</span>
+                    <!-- Avatar do utilizador (imagem do administrador) -->
+                    <img src="./imagens/dashboard/avatar1.png" alt="Avatar do Administrador" class="avatar">
+                </div>
+            </header>
+
+            <!-- Seção de cartões informativos do dashboard -->
+            <section class="dashboard-cards">
+
+                <!-- Cartão que exibe o número de utilizadores ativos -->
+                <div class="card">
+                    <h2>Utilizadores Ativos</h2>
+                    <p>150</p>
+                </div>
+
+                <!-- Cartão que exibe o número de novos registos -->
+                <div class="card">
+                    <h2>Novos Registos</h2>
+                    <p>25</p>
+                </div>
+
+                <!-- Cartão que exibe o número de relatórios gerados -->
+                <div class="card">
+                    <h2>Relatórios Gerados</h2>
+                    <p>10</p>
+                </div>
+
+                <!-- Cartão que exibe o número de configurações pendentes -->
+                <div class="card">
+                    <h2>Configurações Pendentes</h2>
+                    <p>3</p>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

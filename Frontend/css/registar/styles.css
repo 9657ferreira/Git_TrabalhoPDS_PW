@@ -1,0 +1,139 @@
+/* 
+    Define o estilo global para todos os elementos da página 
+    Remove margens e preenchimentos padrão, define o modelo de caixa e a fonte padrão
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o site */
+}
+
+/* 
+    Estilo do corpo da página 
+    Define a cor de fundo e a altura total da janela de visualização
+*/
+body {
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    height: 100vh; /* Altura total da viewport */
+}
+
+/* 
+    Container principal da página 
+    Organiza o layout em flexbox para alinhar imagem e formulário lado a lado
+*/
+.container {
+    display: flex;
+    height: 100vh; /* Preenche toda a altura da tela */
+}
+
+/* 
+    Seção da imagem no lado esquerdo 
+    Ocupa o dobro do espaço da seção do formulário
+*/
+.image-section {
+    flex: 2; /* Ocupa 2/3 do espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f5f5f5; /* Mantém o fundo consistente */
+}
+
+/* 
+    Estilo da imagem dentro da seção de imagem 
+    Garante que a imagem cubra todo o espaço disponível sem distorção
+*/
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem mantém a proporção ao preencher o container */
+}
+
+/* 
+    Seção do formulário de registo 
+    Organiza os elementos em coluna e aplica um fundo branco
+*/
+.form-section {
+    flex: 1; /* Ocupa 1/3 do espaço disponível */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: white; /* Fundo branco para contraste */
+    padding: 40px; /* Espaçamento interno */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave à direita */
+}
+
+/* 
+    Estilo da logo da empresa 
+    Define o tamanho máximo e o espaçamento inferior
+*/
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* 
+    Estilo do formulário de registo 
+    Define uma largura máxima para os campos do formulário
+*/
+form {
+    width: 100%;
+    max-width: 300px; /* Largura máxima do formulário */
+}
+
+/* 
+    Estilo para os campos de email e texto 
+    Define o preenchimento, margem, borda e cor do texto
+*/
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaçamento vertical */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 5px; /* Cantos arredondados */
+    color: #389eac; /* Cor do texto em azul esverdeado */
+}
+
+/* 
+    Estilo para a seção de upload de ficheiros (captcha) 
+    Alinha os elementos horizontalmente
+*/
+.captcha {
+    margin: 10px 0; /* Espaçamento vertical */
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+/* 
+    Estilo geral para os botões 
+    Remove a borda padrão, arredonda os cantos e define o cursor
+*/
+button {
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+}
+
+/* 
+    Estilo específico para o botão de submissão 
+    Define a cor de fundo, a cor do texto e a transição de cor no hover
+*/
+.submit-btn {
+    width: 100%;
+    background-color: #389eac; /* Cor de fundo azul esverdeado */
+    color: white; /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* 
+    Efeito hover para o botão de submissão 
+    Altera ligeiramente a cor de fundo para um efeito visual agradável
+*/
+.submit-btn:hover {
+    background-color: #388eac; /* Cor ligeiramente mais escura no hover */
+}

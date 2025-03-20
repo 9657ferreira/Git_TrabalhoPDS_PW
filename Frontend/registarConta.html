@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Definição do tipo de documento como HTML5 -->
+    <meta charset="UTF-8">
+    
+    <!-- Configuração da viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Inforfast Business Solutions</title>
+    
+    <!-- Ligação ao ficheiro de estilos CSS para estilização da página -->
+    <link rel="stylesheet" href="./css/registar/styles.css">
+</head>
+<body>
+    <!-- Container principal para organizar o layout da página -->
+    <div class="container">
+        
+        <!-- Seção da imagem principal da interface -->
+        <div class="image-section">
+            <img src="./imagens/principal/imagemprincipal.png" alt="Imagem Principal">
+        </div>
+        
+        <!-- Seção do formulário de registo -->
+        <div class="form-section">
+            
+            <!-- Logotipo da empresa para reforço da marca -->
+            <a href="index.html">
+                <img src="./imagens/logo/logo.jpg" alt="Inforfast Business Solutions" class="logo">
+            </a>
+            
+            <!-- Início do formulário de registo -->
+            <form>
+                
+                <!-- Campo de entrada para o email do utilizador -->
+                <input type="email" placeholder="Email" required>
+                
+                <!-- Campo de entrada para o nome do utilizador -->
+                <input type="text" placeholder="Nome" required>
+                
+                <!-- Campo para o utilizador inserir a morada -->
+                <input type="text" placeholder="Morada" required>
+                
+                <!-- Campo para o código postal -->
+                <input type="text" placeholder="Código Postal" required>
+                
+                <!-- Seção para o carregamento do comprovativo de residência -->
+                <div class="captcha">
+                    <!-- Ícone ilustrativo para o carregamento de ficheiros -->
+                    <img src="./imagens/principal/carregar.png" alt="Ícone Carregar Ficheiro"/>
+                    
+                    <!-- Texto informativo sobre o tipo de ficheiro necessário -->
+                    <span>Comprovativo de residência</span>
+                    
+                    <!-- Botão personalizado para abrir o seletor de ficheiros -->
+                    <button type="button" onclick="document.getElementById('fileInput').click()">Carregar Ficheiro</button>
+                    
+                    <!-- Input de ficheiro oculto para selecionar apenas .png, .pdf, .jpg -->
+                    <input type="file" id="fileInput" accept=".png,.pdf,.jpg" style="display:none" onchange="handleFileUpload(event)">
+                    
+                    <!-- Área para exibir o nome do ficheiro carregado -->
+                    <p id="fileName" style="margin-top: 10px; font-size: 14px; color: #333;"></p>
+                </div>
+                
+                <!-- Botão para submeter o formulário -->
+                <button type="submit" class="submit-btn">Submeter Pedido</button>
+                
+            </form>
+        </div>
+    </div>
+     <!-- Importa o ficheiro JavaScript externo -->
+     <script src="./javaScript/scriptCarregarComprovativoMorada.js" defer></script>
+</body>
+</html>
